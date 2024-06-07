@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>インタビューリスト</title>
+    <link th:href="@{/css/interview/InterviewList.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+</head>
+<body>
+    <div class="interviewArea">
+        <header>
+            <span>インタビューリスト</span>
+            <button class="createBtn">新規</button>
+        </header>
+        <main>
+            <div class="searchArea">
+                <span>検索条件</span>
+                <select name="性別" id="gender">
+                    <option value="">性別</option>
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+                <select name="年齢" id="age">
+                    <option value="">年齢</option>
+                    <option value="18~22">18~22</option>
+                    <option value="22~29">22~29</option>
+                </select>
+                <select name="クラス" id="idClass">
+                    <option value="">クラス</option>
+                    <option value="1">Java</option>
+                    <option value="2">Javascript</option>
+                </select>
+                <input type="text" class="name">
+                <button class="searchBtn">検索</button>
+            </div>
+            
+            <div class="formArea" id="search" th:fragment="search">
+                <table>
+                    <tr>
+                        <th class="no">No.</th>
+                        <th class="nameEng">名前  (英)</th>
+                        <th class="nameCn">名前  (中)</th>
+                        <th class="gender">性別</th>
+                        <th class="age">年齢</th>
+                        <th class="idClass">クラス</th>
+                        <th class="previewBtn"></th>
+                        <th class="delBtn"></th>
+                    </tr>
+                    <p id="pages" th:text="${searchData.pages}"></p>
+                    <tr th:each="item, status : ${searchData}">
+                        <p style="display: none;" id="pageNum" th:text="${searchData.pageNum}"></p>
+                        <td th:text="${status.count}" class="no"></td>
+                        <td th:text="${item.firstnameEng} +  ',' + ${item.lastnameEng}"></td>
+                        <td th:text="${item.nameCn}"></td>
+                        <td th:text="${item.gender}"></td>
+                        <td th:text="${item.age}"></td>
+                        <td th:text="${item.idClass}"></td>      
+                        <td>
+                            <button class="previewBtn" th:value="${item.id}">プレビュー</button>
+                        </td>
+                        <td>
+                            <button class="delBtn" th:value="${item.id}">削除</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pageArea">
+                <button class="backBtn">前ページ</button>
+                <button class="nextBtn">次ページ</button>
+            </div>
+        </main>
+    </div>
+    
+    <script th:src="@{/js/interview/InterviewList.js}"></script>
+</body>
+
+</html>

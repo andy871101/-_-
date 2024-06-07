@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 140vh;
+    border: 1px solid black;
+    font-size: 25px;
+
+}
+.interviewArea{
+    position: absolute;
+    right: 0;
+    bottom: -364px;
+    width: 82vw;
+    height: 130vh;
+    border: 1px solid black;
+}
+.interviewArea header{
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+
+}
+
+
+.title, .photo, .video{
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+.profile{
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+
+}
+.profile textarea{
+    resize: none;
+    width: 1000px;
+    height: 320px;
+    font-size: 25px;
+}
+
+span{
+    margin-left: 85px;
+    width: 220px;
+}
+.text{
+    width: 1000px;
+    height: 40px;
+    font-size: 25px;
+}
+
+.saveAndreview{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.saveAndreview .saveBtn{
+    width: 160px;
+    height: 70px;
+    margin-right: 70px;
+    font-size: 20px;
+}
+.saveAndreview .reviewBtn{
+    width: 160px;
+    height: 70px;
+    font-size: 20px;
+
+}

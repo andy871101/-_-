@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    width: 99.9%;
+    height: 100vh;
+    padding-right: 1%;
+    border: 1px solid black;
+}
+.interviewArea{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 82vw;
+    height: 90vh;
+    margin-right: 2px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    width: 90%;
+    height: 70px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header span{
+    display: block;
+    font-size: 25px;
+}
+header .createBtn{
+    display: block;
+    width: 160px;
+    height: 100%;
+    font-size: 25px;
+}
+
+main{
+    width: 90%;
+    height: auto;
+    /* border: 1px solid black;     */
+    flex-direction: column;
+}
+.searchArea{
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid black; */
+    position: relative;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+.searchArea span,#gender,#age,#idClass,.name{
+    margin-right: 45px;
+    height: 35px;
+}
+.searchArea #gender,#age{
+    width: 120px;
+    font-size: 23px;
+}
+.searchArea #idClass{
+    width: 200px;
+    font-size: 23px;
+}
+.searchArea .name{
+    width: 230px;
+    font-size: 23px;
+}
+.searchArea button{
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    font-size: 23px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formArea{
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid black; */
+    position: relative;
+    font-size: 25px;
+}
+.pageArea{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid black; */
+    position: relative;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.pageArea .backBtn{
+    position: absolute;
+    height: 75px;
+    width: 110px;
+    left: 32%;
+    font-size: 23px;
+}
+.pageArea .nextBtn{
+    position: absolute;
+    height: 75px;
+    width: 110px;
+    left: 45%;
+    font-size: 23px;
+}
+
+th{
+    text-align: left;
+}
+
+tr{
+    height: 60px;;
+}
+
+.no{
+    width: 50px;
+}
+.nameEng{
+    width: 200px;
+}
+
+.nameCn{
+    width: 130px;
+}
+
+.gender,.age{
+    width: 80px;
+}
+
+.idClass{
+    width: 625px;
+}
+
+.previewBtn, .delBtn{
+    height: 40px;
+    width: 90px;
+    margin-left: 30px;
+}
+
+.delBtn{
+    font-size: 25px;
+}

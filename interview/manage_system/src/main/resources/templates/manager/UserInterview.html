@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>インタビュー編集</title>
+    <link th:href="@{/css/interview/EditInterview.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+
+</head>
+
+<body>
+    <div class="interviewArea">
+        <header>
+            <span>インタビュー編修</span>
+        </header>
+        <main>
+            <input style="display: none;" class="id" th:value="${interviewData[0].id}"></input>
+            <div class="title">
+                <span>インタビュー主旨</span>
+                <input type="text" class="text" id="title" th:value="${interviewData[0].title}">
+            </div>
+            <div class="profile">
+                <span>プロファイル</span>
+                <textarea name="" cols="30" rows="10" id="profile" th:text="${interviewData[0].profile}"></textarea>
+            </div>
+            <div class="photo">
+                <span>写真</span>
+                <input type="text" class="text" id="photo" th:value="${interviewData[0].photo}">
+            </div>
+            <div class="video">
+                <span>動画リンク</span>
+                <input type="text" class="text" id="video" th:value="${interviewData[0].video}">
+            </div>
+            <div class="video">
+                <span>動画リンク</span>
+                <input type="text" class="text" id="lifeVideo" th:value="${interviewData[0].lifeVideo}">
+            </div>
+            <div class="saveAndreview">
+                <button class="saveBtn">編修</button>
+                <button class="reviewBtn">レビュー</button>
+            </div>
+        </main>
+    </div>
+    <script th:src="@{/js/interview/UserInterview.js}"></script>
+
+</body>
+
+</html>

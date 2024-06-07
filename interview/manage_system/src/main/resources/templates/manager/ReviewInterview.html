@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>インタビューレビュー</title>
+    <link th:href="@{/css/interview/ReviewInterview.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+</head>
+<body>
+    <div class="interviewArea">
+        <input style="display: none;" class="id" th:value="${interviewData[0].id}">
+        <header>
+            <span class="margin">インタビュー</span>
+        </header>
+        <div class="title">
+            <span class="margin">インタビュー主旨</span>
+            <span>インタビュー主旨（略）</span>
+            </div>
+        <div class="photo">
+            <p id="photoData" style="display: none;" th:text="${interviewData[0].photo}"></p>
+            <img src="" alt="" id="getPhotoData" class="margin">
+        </div>
+        <div class="profile">
+            <span class="margin">プロファイル</span>
+            <span>プロファイル（略）</span>
+        </div>
+        <div class="video">
+            <p id="videoData" style="display: none;" th:text="${interviewData[0].video}"></p>
+            <p id="lifeVideoData" style="display: none;" th:text="${interviewData[0].lifeVideo}"></p>
+            <div class="video margin">
+                <iframe 
+                    id="getVideoData"
+                    width="1000px" 
+                    height="500px" 
+                    src=""
+                    title="YouTube video player" 
+                    frameborder="1" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="unsafe-url" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video margin">
+                <iframe 
+                    id="getLifeVideoData"
+                    width="1000px" 
+                    height="500px" 
+                    src=""
+                    title="YouTube video player" 
+                    frameborder="1" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="unsafe-url" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="backAndClose">
+            <button class="backBtn">編修</button>
+            <button class="closeBtn">閉じる</button>
+        </div>
+    </div>
+    <script th:src="@{/js/interview/ReviewInterview.js}"></script>
+</body>
+</html>
